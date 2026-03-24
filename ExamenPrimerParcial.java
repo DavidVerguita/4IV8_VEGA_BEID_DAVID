@@ -1,5 +1,10 @@
 import java.util.Scanner;
 
+/**
+ * Alumno: Vega Beid David
+ * Grupo: 4IV8 | No. lista: 33
+ * Examen Primer Parcial
+ */
 public class ExamenPrimerParcial {
 
     // Constantes de precios y porcentajes
@@ -9,6 +14,9 @@ public class ExamenPrimerParcial {
     private static final double TASA_DESCUENTO = 0.0725; // 7.25%
     private static final double TASA_IMPUESTO = 0.16;    // 16% de IVA
 
+    // Límite máximo para las medidas (evitar ingresos absurdos)
+    private static final double MEDIDA_MAXIMA = 1000.0;
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         boolean salir = false;
@@ -17,7 +25,7 @@ public class ExamenPrimerParcial {
         System.out.println("   SISTEMA DE COTIZACIÓN DE PISOS - 1ER PARCIAL        ");
         System.out.println("=======================================================");
 
-        // Ciclo repetitivo principal hasta que el usuario elija salir
+        // Ciclo repetitivo principal
         do {
             System.out.println("\n--- MENÚ PRINCIPAL ---");
             System.out.println("1. Generar nueva cotización");
@@ -45,7 +53,6 @@ public class ExamenPrimerParcial {
     private static void procesarVenta(Scanner scanner) {
         System.out.println("\n--- DATOS DEL CLIENTE ---");
         
-        // Validación del nombre (no puede estar vacío)
         String nombreCliente = "";
         while (nombreCliente.isEmpty()) {
             System.out.print("Ingrese el nombre completo del comprador: ");
@@ -56,8 +63,9 @@ public class ExamenPrimerParcial {
         }
 
         System.out.println("\n--- MEDIDAS DEL PISO ---");
-        double ancho = solicitarMedida(scanner, "Ingrese el ANCHO del piso en metros: ");
-        double largo = solicitarMedida(scanner, "Ingrese el LARGO del piso en metros: ");
+        // Aquí pasamos el límite máximo a nuestra función de validación
+        double ancho = solicitarMedida(scanner, "Ingrese el ANCHO del piso en metros: ", MEDIDA_MAXIMA);
+        double largo = solicitarMedida(scanner, "Ingrese el LARGO del piso en metros: ", MEDIDA_MAXIMA);
         
         double areaTotal = ancho * largo;
 
@@ -70,7 +78,6 @@ public class ExamenPrimerParcial {
         String tipoPiso = "";
         boolean opcionValida = false;
 
-        // Validación de la opción de piso
         while (!opcionValida) {
             System.out.print("Seleccione el tipo de piso (A, B o C): ");
             String seleccion = scanner.nextLine().trim().toUpperCase();
@@ -96,10 +103,8 @@ public class ExamenPrimerParcial {
             }
         }
 
-        // Cálculos iniciales
         double subtotal = areaTotal * precioMetroCuadrado;
 
-        // Confirmación de compra para aplicar descuento
         System.out.print("\n¿El cliente confirma la compra en este momento? (S/N): ");
         String confirmaStr = scanner.nextLine().trim().toUpperCase();
         boolean confirmaCompra = confirmaStr.equals("S") || confirmaStr.equals("SI");
@@ -113,7 +118,6 @@ public class ExamenPrimerParcial {
         double impuestos = subtotalConDescuento * TASA_IMPUESTO;
         double totalFinal = subtotalConDescuento + impuestos;
 
-        // Visualización de la información (Ticket)
         System.out.println("\n=======================================================");
         System.out.println("                  RESUMEN DE COMPRA                    ");
         System.out.println("=======================================================");
@@ -137,8 +141,8 @@ public class ExamenPrimerParcial {
         System.out.println("=======================================================\n");
     }
 
-    // Método robusto para validar que el usuario ingrese números válidos y positivos
-    private static double solicitarMedida(Scanner scanner, String mensaje) {
+    // Método robusto ACTUALIZADO: Ahora bloquea números negativos, letras Y números absurdamente grandes
+    private static double solicitarMedida(Scanner scanner, String mensaje, double maximo) {
         double medida = 0;
         boolean valido = false;
         
@@ -146,10 +150,12 @@ public class ExamenPrimerParcial {
             System.out.print(mensaje);
             try {
                 medida = Double.parseDouble(scanner.nextLine().trim());
-                if (medida > 0) {
-                    valido = true;
-                } else {
+                if (medida <= 0) {
                     System.out.println(">> ERROR: La medida debe ser mayor a 0.");
+                } else if (medida > maximo) {
+                    System.out.println(">> ERROR: La medida excede el límite permitido de " + maximo + " metros. Ingrese un valor realista.");
+                } else {
+                    valido = true;
                 }
             } catch (NumberFormatException e) {
                 System.out.println(">> ERROR: Entrada inválida. Por favor, ingrese un número (se aceptan decimales).");
