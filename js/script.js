@@ -1,54 +1,70 @@
-// Atrapamos el formulario para poder controlarlo
-const formulario = document.getElementById('formulario-producto');
+const regexValidar = /^\d+(\.\d{1,2})?$/; // RegEx para números positivos
 
-// Escuchamos el evento cuando le pican "Enviar"
-formulario.addEventListener('submit', function(evento) {
-    
-    // Evitamos que la página se recargue inmediatamente
-    evento.preventDefault(); 
+function validar(valor) {
+    return regexValidar.test(valor);
+}
 
-    // Sacamos los valores que escribió el usuario
-    const nombre = document.getElementById('nombre').value;
-    const precio = parseFloat(document.getElementById('precio').value);
-    const cantidad = parseInt(document.getElementById('cantidad').value);
-    const categoria = document.getElementById('categoria').value;
-    const ganancia = parseFloat(document.getElementById('ganancia').value);
+// 1. Inversión (2% mensual) [cite: 4]
+function ejercicio1() {
+    const cap = document.getElementById('cap1').value;
+    if(!validar(cap)) return alert("Dato inválido");
+    let ganancia = parseFloat(cap) * 0.02;
+    document.getElementById('res1').innerText = `Ganarás $${ganancia.toFixed(2)} al mes.`;
+}
 
-    // --- EMPIEZAN LAS VALIDACIONES ---
+// 2. Vendedor (10% comisión por 3 ventas) [cite: 5]
+function ejercicio2() {
+    const sueldo = document.getElementById('sueldoBase').value;
+    const v1 = document.getElementById('v1').value;
+    const v2 = document.getElementById('v2').value;
+    const v3 = document.getElementById('v3').value;
+    if(![sueldo, v1, v2, v3].every(validar)) return alert("Revisa los montos");
 
-    // 1. Validar longitud del nombre (Máximo 20)
-    if (nombre.length > 20) {
-        alert("El nombre no puede tener más de 20 caracteres.");
-        return; // El return detiene el proceso si hay error
+    let comision = (parseFloat(v1) + parseFloat(v2) + parseFloat(v3)) * 0.10;
+    let total = parseFloat(sueldo) + comision;
+    document.getElementById('res2').innerText = `Comisiones: $${comision.toFixed(2)}, Total: $${total.toFixed(2)}`;
+}
+
+// 3. Descuento (15%) [cite: 6]
+function ejercicio3() {
+    const compra = document.getElementById('compra').value;
+    if(!validar(compra)) return alert("Dato inválido");
+    let pago = parseFloat(compra) * 0.85;
+    document.getElementById('res3').innerText = `Total con descuento: $${pago.toFixed(2)}`;
+}
+
+// 4. Calificación Final (55%, 30%, 15%) [cite: 8, 9, 10, 11]
+function ejercicio4() {
+    const p1 = document.getElementById('p1').value, p2 = document.getElementById('p2').value, p3 = document.getElementById('p3').value;
+    const ex = document.getElementById('ex').value, tr = document.getElementById('tr').value;
+    if(![p1, p2, p3, ex, tr].every(validar)) return alert("Revisa las notas");
+
+    let promedioP = (parseFloat(p1) + parseFloat(p2) + parseFloat(p3)) / 3;
+    let notaFinal = (promedioP * 0.55) + (parseFloat(ex) * 0.30) + (parseFloat(tr) * 0.15);
+    document.getElementById('res4').innerText = `Final: ${notaFinal.toFixed(2)}`;
+}
+
+// 5. Porcentaje H/M [cite: 12]
+function ejercicio5() {
+    const h = document.getElementById('hombres').value;
+    const m = document.getElementById('mujeres').value;
+    if(!validar(h) || !validar(m)) return alert("Pon números válidos");
+
+    let total = parseInt(h) + parseInt(m);
+    let porH = (parseInt(h) / total) * 100;
+    let porM = (parseInt(m) / total) * 100;
+    document.getElementById('res5').innerText = `Hombres: ${porH.toFixed(1)}%, Mujeres: ${porM.toFixed(1)}%`;
+}
+
+// 6. Edad Exacta [cite: 13]
+function ejercicio6() {
+    const fecha = document.getElementById('fechaNac').value;
+    if(!fecha) return alert("Selecciona una fecha");
+    const hoy = new Date();
+    const nac = new Date(fecha);
+    let edad = hoy.getFullYear() - nac.getFullYear();
+    if (hoy.getMonth() < nac.getMonth() || (hoy.getMonth() === nac.getMonth() && hoy.getDate() < nac.getDate())) {
+        edad--;
     }
-
-    // 2. Validar precio (Máximo 2000)
-    if (precio > 2000) {
-        alert("El precio de venta no puede sobrepasar los $2000 pesos.");
-        return;
-    }
-
-    // 3. Validar cantidad (Máximo 100)
-    if (cantidad > 100) {
-        alert("La cantidad en stock no puede ser mayor a 100.");
-        return;
-    }
-
-    // 4. Validar categoría (Máximo 10 caracteres)
-    if (categoria.length > 10) {
-        alert("La categoría no puede tener más de 10 caracteres.");
-        return;
-    }
-
-    // 5. Validar ganancia (Máximo 2000)
-    if (ganancia > 2000) {
-        alert("La ganancia no puede sobrepasar los $2000 pesos.");
-        return;
-    }
-
-    // Si pasa todas las validaciones sin atorarse, mostramos éxito
-    alert("¡Producto registrado con éxito en el inventario!");
-    
-    // Limpiamos el formulario para el siguiente registro
-    formulario.reset();
-});
+    document.getElementById('res6').innerText = `Tienes ${edad} años.`;
+}

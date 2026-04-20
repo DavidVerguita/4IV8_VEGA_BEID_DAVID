@@ -2,55 +2,60 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inventario - Agregar Producto</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
+    <title>Problemas Algoritmos - JS</title>
+<link rel="stylesheet" href="css/style.css"></head>
 <body>
+    <h1>Ejercicios JS - Primera Parte</h1>
+    <div class="container">
+        <div class="card">
+            <h3>1. Inversión (2%)</h3>
+            <input type="text" id="cap1" placeholder="Capital">
+            <button onclick="ejercicio1()">Calcular</button>
+            <p id="res1"></p>
+        </div>
 
-    <div class="contenedor-formulario">
-        <h2>Agregar características del producto</h2>
-        
-        <form id="formulario-producto">
-            <div class="campo">
-                <label for="id-prod">ID del producto:</label>
-                <input type="text" id="id-prod" required>
-            </div>
+        <div class="card">
+            <h3>2. Sueldo y Comisiones</h3>
+            <input type="text" id="sueldoBase" placeholder="Sueldo Base">
+            <input type="text" id="v1" placeholder="Venta 1">
+            <input type="text" id="v2" placeholder="Venta 2">
+            <input type="text" id="v3" placeholder="Venta 3">
+            <button onclick="ejercicio2()">Calcular Total</button>
+            <p id="res2"></p>
+        </div>
 
-            <div class="campo">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" maxlength="20" required>
-            </div>
+        <div class="card">
+            <h3>3. Descuento Tienda (15%)</h3>
+            <input type="text" id="compra" placeholder="Total Compra">
+            <button onclick="ejercicio3()">Aplicar</button>
+            <p id="res3"></p>
+        </div>
 
-            <div class="campo">
-                <label for="categoria">Categoría:</label>
-                <input type="text" id="categoria" maxlength="10" required>
-            </div>
+        <div class="card">
+            <h3>4. Calificación Final</h3>
+            <input type="text" id="p1" placeholder="Parcial 1">
+            <input type="text" id="p2" placeholder="Parcial 2">
+            <input type="text" id="p3" placeholder="Parcial 3">
+            <input type="text" id="ex" placeholder="Examen Final">
+            <input type="text" id="tr" placeholder="Trabajo Final">
+            <button onclick="ejercicio4()">Promediar</button>
+            <p id="res4"></p>
+        </div>
 
-            <div class="campo">
-                <label for="precio">Precio:</label>
-                <input type="number" id="precio" placeholder="$" required>
-            </div>
+        <div class="card">
+            <h3>5. Hombres y Mujeres</h3>
+            <input type="text" id="hombres" placeholder="Num. Hombres">
+            <input type="text" id="mujeres" placeholder="Num. Mujeres">
+            <button onclick="ejercicio5()">Calcular %</button>
+            <p id="res5"></p>
+        </div>
 
-            <div class="campo">
-                <label for="cantidad">Cantidad:</label>
-                <input type="number" id="cantidad" required>
-            </div>
-
-            <div class="campo">
-                <label for="ganancia">Ganancia (Pesos):</label>
-                <input type="number" id="ganancia" placeholder="$" required>
-            </div>
-
-            <div class="campo">
-                <label for="caducidad">Fecha de caducidad:</label>
-                <input type="date" id="caducidad" required>
-            </div>
-
-            <button type="submit" id="btn-enviar">Enviar</button>
-        </form>
+        <div class="card">
+            <h3>6. Edad Exacta</h3>
+            <input type="date" id="fechaNac">
+            <button onclick="ejercicio6()">Calcular</button>
+            <p id="res6"></p>
+        </div>
     </div>
-
-    <script src="js/script.js"></script>
-</body>
+<script src="js/script.js"></script></body>
 </html>
