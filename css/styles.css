@@ -1,0 +1,63 @@
+/* Reseteo básico */
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif; /* Puedes cambiarla por la que usaste en Figma */
+}
+
+body {
+    padding: 40px;
+    background-color: #f4f4f4; /* Un fondito gris para que resalte el cuadro blanco */
+}
+
+/* El contenedor principal (Basado en tu imagen) */
+.contenedor-formulario {
+    background-color: white;
+    width: 400px;
+    padding: 30px;
+    /* La línea azul del lado izquierdo */
+    border-left: 2px solid #0078D7; 
+}
+
+h2 {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+/* Estructura de cada input y su texto */
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid black; /* Bordes cuadrados y negros como en tu diseño */
+    outline: none;
+}
+
+input:focus {
+    border-color: #0078D7; /* Que se pinte azul al escribir */
+}
+
+/* El botón igualito al tuyo */
+#btn-enviar {
+    background-color: #00D4D4; /* Color cyan */
+    color: black;
+    border: 1px solid black;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#btn-enviar:hover {
+    background-color: #00b3b3;
+}
