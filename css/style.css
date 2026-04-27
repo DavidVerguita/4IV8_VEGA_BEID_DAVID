@@ -1,0 +1,137 @@
+/* Paleta de colores */
+:root {
+    --color1: #101a23;
+    --color2: #0c141a;
+    --color3: #080d11;
+    --color4: #040709;
+    --color5: #000000;
+    --text-color: #e2e8f0;
+    --accent: #3b82f6;
+}
+
+body {
+    background-color: var(--color5);
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+h2, h3, em {
+    font-family: 'Lora', serif;
+    margin: 0 0 1rem 0;
+}
+
+h2 {
+    color: var(--text-color);
+    border-bottom: 1px solid var(--color1);
+    padding-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+h3 {
+    font-size: 1rem;
+    color: #94a3b8;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+}
+
+.problema-container {
+    background-color: var(--color3);
+    border: 1px solid var(--color2);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+}
+
+.problema-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.problema-input {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--color4);
+    border: 1px solid var(--color1);
+    color: var(--text-color);
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.problema-input:focus {
+    border-color: var(--accent);
+}
+
+.problema-button {
+    background-color: var(--color1);
+    color: var(--text-color);
+    border: 1px solid var(--color2);
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.problema-button:hover {
+    background-color: var(--color2);
+    border-color: var(--text-color);
+}
+
+.problema-output {
+    background-color: var(--color4);
+    width: 100%;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-top: 1.5rem;
+    border-left: 4px solid var(--color1);
+    font-family: 'Inter', monospace;
+    white-space: pre-wrap;
+    box-sizing: border-box;
+}
+
+.tablas {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.problema-table {
+    width: 48%;
+    border-collapse: collapse;
+}
+
+.problema-table th, .problema-table td {
+    padding: 0.5rem;
+    text-align: center;
+    border: 1px solid var(--color1);
+}
+
+.problema-table th {
+    background-color: var(--color2);
+}
+
+/* Ajuste específico para inputs dentro de tabla */
+.problema-table .problema-input {
+    width: 80%;
+    text-align: center;
+}
