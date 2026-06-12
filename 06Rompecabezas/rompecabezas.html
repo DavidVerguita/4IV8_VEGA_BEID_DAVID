@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio Gótico - Rompecabezas</title>
+    <link rel="stylesheet" href="./css/juego.css">
+</head>
+<body>
+    <div class="container-main">
+        <div class="col-40">
+            <div id="titulo">
+                <h1>Rompecabezas</h1>
+                <div id="iniciarButton" onclick="mezclarPiezas()">
+                    Mezclar de Nuevo
+                </div>
+                
+                <div id="instrucciones">
+                    <h2>Instrucciones</h2>
+                    <ul id="lista-instrucciones"></ul>
+                </div>
+                
+                <div id="objetivos">
+                    <h2>Objetivo del Juego</h2>
+                    <div class="texto-centrado">
+                        <img src="./images/final.png" alt="Objetivo Final" class="img-objetivo">
+                    </div>
+                </div>
+                
+                <div id="ultimo-movimiento">
+                    <h2>Último Movimiento</h2>
+                    <div id="flecha" class="texto-centrado">
+                        <span>Ninguno</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-60">
+            <div id="juego">
+                <div id="pieza1" class="piezas"><img src="./images/10.jpg" alt="1"></div>
+                <div id="pieza2" class="piezas"><img src="./images/20.jpg" alt="2"></div>
+                <div id="pieza3" class="piezas"><img src="./images/30.jpg" alt="3"></div>
+                <div id="pieza4" class="piezas"><img src="./images/40.jpg" alt="4"></div>
+                <div id="pieza5" class="piezas"><img src="./images/50.jpg" alt="5"></div>
+                <div id="pieza6" class="piezas"><img src="./images/60.jpg" alt="6"></div>
+                <div id="pieza7" class="piezas"><img src="./images/70.jpg" alt="7"></div>
+                <div id="pieza8" class="piezas"><img src="./images/80.jpg" alt="8"></div>
+                <div id="pieza9" class="piezas" class="blanco"></div>
+            </div>
+        </div>
+        
+        <div class="container-footer">
+            <a href="./index.html" class="btn-back">Regresar a Página Principal</a>
+        </div>
+    </div>
+
+    <script src="./js/rompecabezas.js"></script>
+</body>
+</html>

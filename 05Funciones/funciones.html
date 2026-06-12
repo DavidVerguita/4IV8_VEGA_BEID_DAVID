@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Moderno - ES6</title>
+    <link rel="stylesheet" href="./css/funciones.css">
+</head>
+<body>
+    <div class="container-main">
+        <h1>Conceptos de ECMAScript 6 (ES6)</h1>
+
+        <div class="teoria-card">
+            <h2>Estructura de Variables</h2>
+            <p>En las especificaciones modernas de JavaScript, el uso tradicional de <code>var</code> es sustituido por un esquema más seguro y controlado:</p>
+            <ul>
+                <li><strong>let:</strong> Define una variable de tipo "protegida". Su alcance (scope) está limitado estrictamente al bloque de código donde fue declarada.</li>
+                <li><strong>const:</strong> Se utiliza para declarar constantes cuyos valores no pueden ser reasignados a lo largo de la ejecución del script.</li>
+            </ul>
+        </div>
+
+        <div class="teoria-card">
+            <h2>Funciones Flecha (Arrow Functions)</h2>
+            <p>Es una forma mucho más compacta y efectiva de declarar funciones en JS. A diferencia de una función clásica, la función flecha:</p>
+            <ul>
+                <li>No genera su propio contexto (no tiene su propio <code>this</code>).</li>
+                <li>Necesita ser declarada explícitamente antes de ser invocada en el flujo del código.</li>
+                <li>Si consta de una sola operación, realiza el retorno implícito sin requerir la palabra clave <code>return</code>.</li>
+            </ul>
+        </div>
+
+        <div class="teoria-card">
+            <h2>Iteración de Arreglos (Arrays)</h2>
+            <p>Utilizando métodos integrados como <code>forEach</code> y <code>map</code>, podemos iterar o transformar colecciones de datos eficientemente sin alterar el arreglo original.</p>
+            
+            <div class="interactive-box">
+                <h3>Colección Activa (razaDePerros):</h3>
+                <div class="dog-console">
+                    <ul id="dog-list">
+                        <li>Gran Danés</li>
+                        <li>Doberman</li>
+                        <li>Pastor Alemán</li>
+                        <li>Pitbull</li>
+                        <li>San Bernardo</li>
+                        <li>Xoloitzcuintle</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-footer">
+            <footer>
+                <a href="./index.html" class="btn-back">Regresar a Página Principal</a>
+            </footer>
+        </div>
+    </div>
+
+    <script src="./js/funciones.js"></script>
+</body>
+</html>

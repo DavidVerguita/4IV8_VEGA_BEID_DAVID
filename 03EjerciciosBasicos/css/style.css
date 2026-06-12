@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=UnifrakturMaguntia&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background-color: #030816;
+    font-family: 'Playfair Display', serif;
+    color: #e0e0e0;
+}
+
+.container-main {
+    background: linear-gradient(135deg, #050a18 0%, #120511 100%);
+    border: 5px solid #ff3c00;
+    border-radius: 50px;
+    margin: 2rem;
+    padding: 2.5rem;
+    box-shadow: 0 0 30px rgba(255, 60, 0, 0.25);
+}
+
+h1 {
+    font-family: 'UnifrakturMaguntia', serif;
+    font-size: 3.2rem;
+    color: #ff3c00;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+form {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+form > label {
+    display: block;
+    margin-bottom: 1.5rem;
+    color: #ff9100;
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+
+.container-table table {
+    margin: 1.5rem auto;
+    border-collapse: separate;
+    border-spacing: 15px;
+    width: 100%;
+}
+
+.container-table td {
+    font-size: 1.05rem;
+    color: #e0e0e0;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.container-table td:nth-child(2) {
+    text-align: center;
+    width: 50%;
+}
+
+.container-table input[type="text"] {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #060913;
+    border: 1px solid #3a1212;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 1rem;
+    text-align: center;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container-table input[type="text"]:focus {
+    outline: none;
+    border-color: #ff3c00;
+    box-shadow: 0 0 10px rgba(255, 60, 0, 0.4);
+}
+
+.container-table input[readonly] {
+    background-color: #0b0d16;
+    border-color: #240c0c;
+    color: #ff9100;
+    font-weight: bold;
+}
+
+.container-table input[type="button"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.2rem 0;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.container-table input[name="enviar"] {
+    background-color: #ff3c00;
+    color: #ffffff;
+}
+
+.container-table input[name="enviar"]:hover {
+    background-color: #ff5100;
+    transform: scale(1.03);
+}
+
+.container-table input[name="delete"] {
+    background-color: #240c0c;
+    color: #ff9100;
+    border: 1px solid #ff9100;
+}
+
+.container-table input[name="delete"]:hover {
+    background-color: #3a1212;
+    transform: scale(1.03);
+}
+
+.container-footer {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.btn-back {
+    color: #ffc400;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.btn-back:hover {
+    color: #ff3c00;
+    text-shadow: 0 0 12px rgba(255, 60, 0, 0.7);
+}

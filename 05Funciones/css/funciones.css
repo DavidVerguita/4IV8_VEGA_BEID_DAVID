@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=UnifrakturMaguntia&display=swap');
+
+/* Reset de márgenes y caja general */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background-color: #030816;
+    font-family: 'Playfair Display', serif;
+    color: #e0e0e0;
+}
+
+/* El contenedor principal de la página con marco encendido */
+.container-main {
+    background: linear-gradient(135deg, #050a18 0%, #120511 100%);
+    border: 5px solid #ff3c00;
+    border-radius: 50px;
+    margin: 2rem;
+    padding: 2.5rem;
+    box-shadow: 0 0 30px rgba(255, 60, 0, 0.25);
+}
+
+h1 {
+    font-family: 'UnifrakturMaguntia', serif;
+    font-size: 3rem;
+    color: #ff3c00;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+/* Tarjetas individuales para cada concepto explicativo */
+.teoria-card {
+    background-color: #0b0d16;
+    border: 2px solid #240c0c;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 1.5rem auto;
+    max-width: 850px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    text-align: left;
+}
+
+.teoria-card h2 {
+    font-family: 'UnifrakturMaguntia', serif;
+    color: #ff9100;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.teoria-card p {
+    color: #d1d1d1;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Formato para resaltar palabras reservadas de código */
+code {
+    background-color: #190a19;
+    color: #e36fe5;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+
+/* Estilización de listas de viñetas */
+.teoria-card ul {
+    list-style: none;
+    padding-left: 1rem;
+}
+
+.teoria-card li {
+    margin-bottom: 0.75rem;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+/* Reemplazamos la viñeta común por un indicador color fuego */
+.teoria-card li::before {
+    content: "✦";
+    position: absolute;
+    left: 0;
+    color: #ff3c00;
+    font-size: 1.1rem;
+}
+
+.teoria-card strong {
+    color: #ffc400;
+    font-size: 1.1rem;
+}
+
+/* Contenedor interactivo para simulación de salida de datos */
+.interactive-box {
+    margin-top: 1.5rem;
+    border-top: 1px dashed #3a1212;
+    padding-top: 1.5rem;
+}
+
+.interactive-box h3 {
+    color: #b0b5c2;
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+/* Caja simulada de consola de resultados */
+.dog-console {
+    background-color: #04060d;
+    border-left: 4px solid #ff3c00;
+    border-radius: 0 8px 8px 0;
+    padding: 1.2rem;
+}
+
+#dog-list li {
+    font-family: 'Courier New', Courier, monospace;
+    color: #00ff66; /* Verde de consola de depuración */
+    font-weight: bold;
+}
+
+#dog-list li::before {
+    content: ">";
+    color: #ff9100;
+}
+
+/* Botón de Regreso Inferior */
+.container-footer {
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+.btn-back {
+    color: #ffc400;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.btn-back:hover {
+    color: #ff3c00;
+    text-shadow: 0 0 12px rgba(255, 60, 0, 0.7);
+}

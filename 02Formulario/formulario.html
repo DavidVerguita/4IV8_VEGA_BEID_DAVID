@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de formulario y su Validación</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./JS/validarformulario.js" defer></script>
+</head>
+<body>
+    <div class="container-main">
+        <div class="form-container">
+            <h1>Formularios y Validación</h1>
+            
+            <div class="teoria-container">
+                <p>Todos los formularios que están en internet tienen métodos de programación por defecto. Estos métodos nos sirven para poder hacer las acciones principales como son conectarse con los servidores a través de las Arquitecturas Cliente-Servidor.</p>
+                <p>Por defecto, los formularios utilizan el método <strong>GET</strong>, y el segundo método principal es <strong>POST</strong>, aunque existen otros métodos que se encargan del intercambio de información.</p>
+                
+                <div class="metodos-grid">
+                    <article>
+                        <h2>Método GET</h2>
+                        <p>Envía por medio de la URL toda la información del formulario a través del navegador. Su función principal es obtener los datos del servicio; pero es el método más vulnerable de todos, derivado a que se pueden generar inyecciones de código.</p>
+                    </article>
+                    <aside>
+                        <h2>Método POST</h2>
+                        <p>Se encarga de registrar una nueva entrada al sistema. También utiliza la URL como envío por defecto; pero su facultad es poder ocultarla, esto significa que los datos no son visibles para el usuario común en el navegador.</p>
+                    </aside>
+                </div>
+            </div>
+
+            <section class="form-box">
+                <h2>Registro de Usuario</h2>
+                <form name="formulario" method="POST" id="formulario" onsubmit="return validar(this)">
+                    <div class="input-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Por favor escriba aquí su nombre">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="edad">Edad:</label>
+                        <input type="number" name="edad" id="edad" placeholder="Por favor escriba aquí su edad">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" placeholder="Por favor escriba aquí su correo electrónico">
+                    </div>
+                    
+                    <div class="btn-group">
+                        <input type="submit" name="enviar" value="Enviar Registro" class="btn-submit">
+                        <input type="reset" name="borrar" value="Borrar Datos" class="btn-reset">
+                    </div>
+                </form>
+            </section>
+        </div>
+
+        <div class="container-footer">
+            <footer>
+                <a href="./index.html" class="btn-back">Regresar a Página Principal</a>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

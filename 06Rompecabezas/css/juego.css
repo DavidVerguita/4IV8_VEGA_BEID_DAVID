@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=UnifrakturMaguntia&display=swap');
+
+/* Reset base */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background-color: #030816;
+    font-family: 'Playfair Display', serif;
+    color: #e0e0e0;
+    min-height: 100vh;
+}
+
+/* El contenedor principal con estética de fuego oscuro */
+.container-main {
+    background: linear-gradient(135deg, #050a18 0%, #120511 100%);
+    border: 5px solid #ff3c00;
+    border-radius: 40px;
+    margin: 2rem;
+    padding: 2.5rem;
+    box-shadow: 0 0 30px rgba(255, 60, 0, 0.25);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+/* Títulos principales */
+h1 {
+    font-family: 'UnifrakturMaguntia', serif;
+    font-size: 3rem;
+    color: #ff3c00;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+h2 {
+    font-family: 'UnifrakturMaguntia', serif;
+    color: #ff9100;
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #3a1212;
+    padding-bottom: 0.3rem;
+}
+
+/* Paneles laterales distribuidos */
+.col-40 {
+    flex: 1;
+    min-width: 320px;
+    background-color: #0b0d16;
+    border: 2px solid #240c0c;
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.col-60 {
+    flex: 1.5;
+    min-width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0b0d16;
+    border: 2px solid #240c0c;
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+/* Lista de instrucciones con viñeta ardiente */
+#lista-instrucciones li {
+    font-size: 1rem;
+    color: #d1d1d1;
+    margin: 0.5rem 0;
+    padding-left: 1.2rem;
+    position: relative;
+    line-height: 1.4;
+}
+
+#lista-instrucciones li::before {
+    content: "⚡";
+    position: absolute;
+    left: 0;
+    color: #ff3c00;
+}
+
+/* Botón de mezcla (Estilo Fiery Red) */
+#iniciarButton {
+    background-color: #ff3c00;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.8rem;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    margin-bottom: 1rem;
+}
+
+#iniciarButton:hover {
+    background-color: #ff5100;
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(255, 60, 0, 0.4);
+}
+
+/* Control de imágenes objetivo */
+.img-objetivo {
+    max-width: 150px;
+    border: 2px solid #ff9100;
+    border-radius: 6px;
+    margin-top: 0.5rem;
+}
+
+#flecha {
+    font-family: monospace;
+    font-size: 1.2rem;
+    color: #00ff66;
+    background-color: #04060d;
+    padding: 0.5rem;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+/* ==========================================
+   EL GRID DEL ROMPECABEZAS (3X3 ESPECTACULAR)
+   ========================================== */
+#juego {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5px;
+    width: 450px;
+    height: 450px;
+    background-color: #04060d;
+    border: 4px solid #ff3c00;
+    padding: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.piezas {
+    background-color: #120511;
+    border: 1px solid #3a1212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.piezas img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.2s;
+}
+
+.piezas:hover img {
+    transform: scale(1.02);
+}
+
+/* La pieza vacía o hueco blanco */
+#pieza9 {
+    background-color: #050a18;
+    border: 2px dashed #ff9100;
+    cursor: default;
+}
+
+/* Pie de página con botón de regreso */
+.container-footer {
+    width: 100%;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.btn-back {
+    color: #ffc400;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.btn-back:hover {
+    color: #ff3c00;
+    text-shadow: 0 0 12px rgba(255, 60, 0, 0.7);
+}

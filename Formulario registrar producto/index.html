@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario - Agregar Producto</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="contenedor-formulario">
+        <h2>Agregar características del producto</h2>
+        
+        <form id="formulario-producto">
+            <div class="campo">
+                <label for="id-prod">ID del producto:</label>
+                <input type="text" id="id-prod" required>
+            </div>
+
+            <div class="campo">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" maxlength="20" required>
+            </div>
+
+            <div class="campo">
+                <label for="categoria">Categoría:</label>
+                <input type="text" id="categoria" maxlength="10" required>
+            </div>
+
+            <div class="campo">
+                <label for="precio">Precio:</label>
+                <input type="number" id="precio" placeholder="$" required>
+            </div>
+
+            <div class="campo">
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" required>
+            </div>
+
+            <div class="campo">
+                <label for="ganancia">Ganancia (Pesos):</label>
+                <input type="number" id="ganancia" placeholder="$" required>
+            </div>
+
+            <div class="campo">
+                <label for="caducidad">Fecha de caducidad:</label>
+                <input type="date" id="caducidad" required>
+            </div>
+
+            <button type="submit" id="btn-enviar">Enviar</button>
+        </form>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+/* ==========================================================================
+   1. IMPORTACIÓN DE FUENTES (Google Fonts)
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=UnifrakturMaguntia&display=swap');
+
+/* ==========================================================================
+   2. ESTILOS GENERALES Y RESETEO
+   ========================================================================== */
+* {
+    padding: 0;
+    margin: 0;
+    /* Color de texto base: un gris muy claro para contraste gótico */
+    color: #e0e0e0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+html, body {
+    /* Fondo negro profundo con el matiz azul místico de tu paleta */
+    background-color: #030816;
+    font-family: 'Playfair Display', serif;
+}
+
+/* ==========================================================================
+   3. CONTENEDOR PRINCIPAL (Estructura base)
+   ========================================================================== */
+.container-main, .container {
+    /* Degradado de negro a un tono vino/púrpura muy oscuro */
+    background: linear-gradient(135deg, #050a18 0%, #120511 100%);
+    /* Borde con el tono naranja/rojo encendido de tu paleta */
+    border: 5px solid #ff3c00;
+    border-radius: 50px;
+    margin: 2rem;
+    padding: 1.5rem;
+    box-shadow: 0 0 30px rgba(255, 60, 0, 0.25);
+}
+
+/* ==========================================================================
+   4. TIPOGRAFÍA Y ENCABEZADOS (Estilo Gótico)
+   ========================================================================== */
+h1 {
+    font-family: 'UnifrakturMaguntia', serif;
+    font-size: 3.2rem;
+    color: #ff3c00; /* Rojo fuego para títulos principales */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-family: 'UnifrakturMaguntia', serif;
+    color: #ff9100; /* Naranja brillante del atardecer */
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+/* ==========================================================================
+   5. BLOQUES ESTRUCTURALES DE LAS PRÁCTICAS
+   ========================================================================== */
+nav, section, footer, aside, article, .form-box {
+    background-color: #0b0d16; /* Cajas gris oscuro */
+    border: 2px solid #3a1212;  /* Bordes sutiles color vino */
+    margin: 1rem;
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto interactivo al pasar el mouse sobre los bloques */
+nav:hover, section:hover, footer:hover, aside:hover, article:hover, .form-box:hover {
+    border-color: #ff5100;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 81, 0, 0.15);
+}
+
+/* Mantenemos tu alineación y proporciones originales (inline-flex a 40%) */
+article, aside {
+    width: 40%;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    vertical-align: top;
+}
+
+/* Ajuste para que el contenedor de los bloques article y aside no rompa el diseño */
+.container-body, .metodos-grid {
+    display: block;
+    width: 100%;
+}
+
+/* ==========================================================================
+   6. SECCIÓN TEÓRICA (Párrafos explicativos)
+   ========================================================================== */
+.form-container p, .teoria-container p {
+    text-align: justify;
+    line-height: 1.7;
+    margin: 1rem auto;
+    max-width: 90%;
+    font-size: 1.05rem;
+    color: #d1d1d1;
+}
+
+.form-container strong, .teoria-container strong {
+    color: #ff3c00; /* Destacar texto importante en rojo fuego */
+}
+
+/* ==========================================================================
+   7. FORMULARIOS Y COMPONENTES DE ENTRADA
+   ========================================================================== */
+form {
+    margin-top: 1.5rem;
+    padding: 1rem;
+}
+
+/* Estilos de las etiquetas de texto */
+label {
+    display: inline-block;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: #ffc400; /* Tono dorado/amarillo */
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+/* Inputs de texto, número y correo electrónico */
+input[type="text"],
+input[type="number"],
+input[type="email"] {
+    width: 80%;
+    max-width: 400px;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    background-color: #060913; /* Fondo más oscuro para el input */
+    border: 1px solid #3a1212;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 1rem;
+    text-align: center;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto Focus en los campos de escritura */
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus {
+    outline: none;
+    border-color: #ff3c00;
+    box-shadow: 0 0 10px rgba(255, 60, 0, 0.4);
+}
+
+/* Contenedor opcional para formularios independientes */
+.form-box {
+    max-width: 550px;
+    margin: 2rem auto !important;
+    border: 2px solid #ff5100;
+}
+
+/* ==========================================================================
+   8. BOTONES (Enviar y Borrar)
+   ========================================================================== */
+input[type="submit"],
+input[type="reset"] {
+    width: 40%;
+    max-width: 180px;
+    padding: 0.75rem;
+    margin: 1rem 0.5rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Botón de Enviar (Rojo fuego) */
+input[type="submit"] {
+    background-color: #ff3c00;
+    color: #ffffff;
+}
+
+input[type="submit"]:hover {
+    background-color: #ff5100;
+    transform: scale(1.04);
+}
+
+/* Botón de Borrar (Vino oscuro con texto naranja) */
+input[type="reset"] {
+    background-color: #240c0c;
+    color: #ff9100;
+    border: 1px solid #ff9100;
+}
+
+input[type="reset"]:hover {
+    background-color: #3a1212;
+    transform: scale(1.04);
+}
+
+/* ==========================================================================
+   9. ENLACES (Menús y Botón Regresar)
+   ========================================================================== */
+footer a, .btn-back {
+    color: #ffc400; /* Color oro de la paleta */
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.4rem 1rem;
+    border: 1px dashed transparent;
+    transition: color 0.3s ease, text-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+footer a:hover, .btn-back:hover {
+    color: #ff3c00; /* Brillo de fuego al pasar el mouse */
+    text-shadow: 0 0 12px rgba(255, 60, 0, 0.7);
+    border-color: #ff3c00;
+    border-radius: 4px;
+}

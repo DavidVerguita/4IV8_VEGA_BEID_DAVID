@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght=0,400..900;1,400..900&family=UnifrakturMaguntia&display=swap');
+
+/* Reset de márgenes de maquetación */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background-color: #030816;
+    font-family: 'Playfair Display', serif;
+    color: #e0e0e0;
+    min-height: 100vh;
+}
+
+/* El contenedor envolvente gótico */
+.container-main {
+    background: linear-gradient(135deg, #050a18 0%, #120511 100%);
+    border: 5px solid #ff3c00;
+    border-radius: 40px;
+    margin: 2rem;
+    padding: 2.5rem;
+    box-shadow: 0 0 30px rgba(255, 60, 0, 0.25);
+}
+
+header h1 {
+    font-family: 'UnifrakturMaguntia', serif;
+    font-size: 3.2rem;
+    color: #ff3c00;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+/* Distribución en rejilla de dos columnas (Formulario a la izquierda, Tabla a la derecha) */
+.crud-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.formulario-section {
+    flex: 1;
+    min-width: 320px;
+    background-color: #0b0d16;
+    border: 2px solid #240c0c;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    height: fit-content;
+}
+
+.table-section {
+    flex: 1.8;
+    min-width: 450px;
+    background-color: #0b0d16;
+    border: 2px solid #240c0c;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    font-family: 'UnifrakturMaguntia', serif;
+    color: #ff9100;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #3a1212;
+    padding-bottom: 0.5rem;
+}
+
+/* Estilos de elementos de Formulario */
+.campo {
+    margin-bottom: 1.25rem;
+}
+
+.campo label {
+    display: block;
+    font-weight: bold;
+    color: #ffc400;
+    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
+}
+
+.campo input {
+    width: 100%;
+    background-color: #050a18;
+    border: 1px solid #3a1212;
+    border-radius: 6px;
+    padding: 0.75rem;
+    color: #ffffff;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.campo input:focus {
+    outline: none;
+    border-color: #ff3c00;
+    box-shadow: 0 0 8px rgba(255, 60, 0, 0.4);
+}
+
+/* Mensajes de validación de campos */
+.error {
+    color: #ff4d4d;
+    font-size: 0.85rem;
+    display: block;
+    margin-top: 0.3rem;
+    font-family: monospace;
+}
+
+/* Configuración de botones reactivos */
+.botones-container {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+button {
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#btn-guardar {
+    flex: 1;
+    background-color: #ff3c00;
+    color: #ffffff;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+#btn-guardar:hover {
+    background-color: #ff5100;
+    box-shadow: 0 0 12px rgba(255, 60, 0, 0.5);
+}
+
+.btn-secundario {
+    background-color: #1a1c24;
+    color: #b0b5c2;
+    border: 1px solid #3a1212;
+    padding: 0.8rem 1.2rem;
+    border-radius: 6px;
+}
+
+.btn-secundario:hover {
+    background-color: #252833;
+    color: #ffffff;
+}
+
+/* Tablas de visualización de datos góticas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+}
+
+th, td {
+    padding: 0.85rem;
+    text-align: center;
+    border-bottom: 1px solid #1a1c24;
+}
+
+th {
+    background-color: #04060d;
+    color: #ff9100;
+    font-weight: bold;
+    font-size: 1rem;
+    border-bottom: 2px solid #ff3c00;
+}
+
+tr:hover {
+    background-color: rgba(255, 60, 0, 0.03);
+}
+
+.text-left {
+    text-align: left;
+}
+
+/* Pequeña placa de diseño para las notas numéricas */
+.badge-nota {
+    background-color: #190a19;
+    color: #e36fe5;
+    font-family: monospace;
+    font-weight: bold;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #3a1212;
+}
+
+/* Botones de acción integrados dentro de la fila */
+.btn-accion {
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    margin: 0 0.2rem;
+    border: none;
+}
+
+.btn-editar {
+    background-color: #ffc400;
+    color: #030816;
+}
+
+.btn-editar:hover {
+    background-color: #ffe066;
+}
+
+.btn-eliminar {
+    background-color: #cc0000;
+    color: #ffffff;
+}
+
+.btn-eliminar:hover {
+    background-color: #ff1a1a;
+}
+
+/* Alertas flotantes del sistema */
+.notificacion {
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
+    animation: fadeIn 0.3s ease;
+}
+
+.exito {
+    background-color: rgba(0, 204, 102, 0.15);
+    border: 1px solid #00cc66;
+    color: #00ff88;
+}
+
+.error-box, .error {
+    background-color: rgba(204, 0, 0, 0.15);
+    border: 1px solid #cc0000;
+    color: #ff4d4d;
+}
+
+#mensaje-carga {
+    color: #ff9100;
+    font-style: italic;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+#mensaje-vacio {
+    color: #b0b5c2;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/* Botón inferior de retorno */
+.container-footer {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.btn-back {
+    color: #ffc400;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.btn-back:hover {
+    color: #ff3c00;
+    text-shadow: 0 0 12px rgba(255, 60, 0, 0.7);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

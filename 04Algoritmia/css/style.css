@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=UnifrakturMaguntia&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background-color: #030816;
+    font-family: 'Playfair Display', serif;
+    color: #e0e0e0;
+}
+
+.container-main {
+    background: linear-gradient(135deg, #050a18 0%, #120511 100%);
+    border: 5px solid #ff3c00;
+    border-radius: 50px;
+    margin: 2rem;
+    padding: 2rem;
+    box-shadow: 0 0 30px rgba(255, 60, 0, 0.25);
+}
+
+h1 {
+    font-family: 'UnifrakturMaguntia', serif;
+    font-size: 3.2rem;
+    color: #ff3c00;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.problema-container {
+    background-color: #0b0d16;
+    border: 2px solid #240c0c;
+    margin: 1.5rem auto;
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 900px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.problema-titulo {
+    font-family: 'UnifrakturMaguntia', serif;
+    color: #ff3c00;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.problema-container h3 {
+    color: #b0b5c2;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.problema-container h3 em {
+    color: #ff9100;
+    font-weight: bold;
+}
+
+.formula {
+    font-size: 0.9rem;
+    color: #e36fe5;
+}
+
+.problema-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.problema-input {
+    width: 100%;
+    max-width: 500px;
+    padding: 0.8rem;
+    background-color: #060913;
+    border: 1px solid #3a1212;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.problema-input:focus {
+    outline: none;
+    border-color: #ff3c00;
+    box-shadow: 0 0 10px rgba(255, 60, 0, 0.4);
+}
+
+.problema-button {
+    background-color: #ff3c00;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    width: fit-content;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.problema-button:hover {
+    background-color: #ff5100;
+    transform: translateY(-2px);
+}
+
+.problema-output {
+    width: 100%;
+    background-color: #04060d;
+    border-left: 4px solid #ff9100;
+    padding: 1rem;
+    font-family: monospace;
+    color: #00ff66;
+    border-radius: 0 6px 6px 0;
+    overflow-x: auto;
+}
+
+.tablas-vectores {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.problema-table {
+    border-collapse: collapse;
+    background-color: #080a12;
+    border: 1px solid #1f2330;
+    width: 45%;
+    min-width: 250px;
+}
+
+.problema-table th {
+    background-color: #120511;
+    color: #ff9100;
+    padding: 0.6rem;
+    border: 1px solid #3a1212;
+    font-weight: bold;
+}
+
+.problema-table td {
+    padding: 0.5rem;
+    border: 1px solid #1f2330;
+    color: #e0e0e0;
+    text-align: center;
+}
+
+.problema-table td .problema-input {
+    width: 80px;
+    padding: 0.4rem;
+    text-align: center;
+}
+
+.container-footer {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.btn-back {
+    color: #ffc400;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.btn-back:hover {
+    color: #ff3c00;
+    text-shadow: 0 0 12px rgba(255, 60, 0, 0.7);
+}

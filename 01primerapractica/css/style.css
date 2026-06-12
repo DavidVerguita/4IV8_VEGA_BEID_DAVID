@@ -1,0 +1,81 @@
+/* Importamos la fuente gótica desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=UnifrakturMaguntia&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    /* Cambiamos el 'chartreuse' por un gris claro/blanco roto muy limpio */
+    color: #e0e0e0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+html, body {
+    /* Cambiamos el 'darkblue' por el negro/azul místico más oscuro de tu paleta */
+    background-color: #030816;
+    font-family: 'Playfair Display', serif;
+}
+
+.container-main {
+    /* Cambiamos el borde amarillo y el fondo rosa por tu paleta 'Fiery Red Sunset' */
+    border: 5px solid #ff3c00; /* Naranja/rojo encendido */
+    border-radius: 50px;
+    margin: 2rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, #050a18 0%, #120511 100%);
+    box-shadow: 0 0 25px rgba(255, 60, 0, 0.2);
+}
+
+/* Aplicamos la tipografía gótica a todos tus textos en h2 */
+h2 {
+    font-family: 'UnifrakturMaguntia', serif;
+    color: #ff9100; /* Naranja brillante */
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+/* Mantenemos tus selectores originales pero cambiamos el 'darkslategrey' y los bordes rojos */
+nav, section, footer, aside, article {
+    background-color: #0b0d16; /* Gris muy oscuro */
+    border: 2px solid #3a1212;  /* Borde vino sutil */
+    margin: 1rem;
+    border-radius: 10px;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor wrapper para que tus elementos de 40% no se rompan ni se encimen */
+.flex-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+section {
+    width: 100%;
+}
+
+/* Mantenemos tus medidas originales (40% de ancho y 300px de alto) */
+article, aside {
+    width: 40%;
+    height: 300px;
+    margin: 0.5rem;
+}
+
+/* Estilo para tu etiqueta de enlace original */
+footer a {
+    color: #ffc400; /* Dorado/Amarillo de tu paleta */
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-top: 1rem;
+    font-family: 'Playfair Display', serif;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ff3c00; /* Cambia a fuego al pasar el mouse */
+    text-shadow: 0 0 10px rgba(255, 60, 0, 0.6);
+}
